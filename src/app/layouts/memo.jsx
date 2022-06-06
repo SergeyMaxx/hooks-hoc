@@ -32,12 +32,12 @@ const MemoExample = () => {
           </p>
 
           <figcaption>
-            <cite title="reactjs.org">reactjs.org</cite>
+            <cite title={'reactjs.org'}>reactjs.org</cite>
           </figcaption>
         </BlockQuoteWrapper>
       </CollapseWrapper>
 
-      <CollapseWrapper title="Когда использовать">
+      <CollapseWrapper title={'Когда использовать'}>
         <SmallTitle>Если компонент</SmallTitle>
         <ul>
           <li>Часто ререндерится</li>
@@ -49,13 +49,13 @@ const MemoExample = () => {
         </ul>
       </CollapseWrapper>
       <CardWrapper>
-        <i className="bi bi-light bulb"/> Если функциональный
+        <i className={'bi bi-light bulb'}/> Если функциональный
         компонент обёрнут в <code>React.memo</code> и использует{' '}
         <code>useState, useReducer или useContext</code>, он будет
         повторно рендериться при изменении состояния или контекста.
       </CardWrapper>
       <CardWrapper>
-        <i className="bi bi-light bulb"/> Функциональный объект равен
+        <i className={'bi bi-light bulb'}/> Функциональный объект равен
         только самому себе
       </CardWrapper>
       <Divider/>
@@ -68,13 +68,13 @@ const MemoExample = () => {
         {' '}
         <SmallTitle>Memo dependency function</SmallTitle>
         <CardWrapper>
-          <i className="bi bi-light bulb"/> Если функция для сверки
+          <i className={'bi bi-light bulb'}/> Если функция для сверки
           не задана, то выполняется поверхностная сверка по{' '}
           <Link
             to={{
               pathname: 'https://github.com/facebook/react/blob/v16.8.6/packages/shared/shallowEqual.js'
             }}
-            target="_blank"
+            target={'_blank'}
           >
             стандартному алгоритму
           </Link>

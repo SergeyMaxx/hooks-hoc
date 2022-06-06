@@ -1,10 +1,13 @@
 import React from 'react'
 import CollapseWrapper from '../common/collapse'
+import PropTypes from 'prop-types'
+import Divider from '../common/divider'
+import SmallTitle from '../common/typografy/smallTitle'
 
 const ChildrenExercise = () => {
   return (
-    <CollapseWrapper title="Упражнение">
-      <p className="mt-3">
+    <CollapseWrapper title={'Упражнение'}>
+      <p className={'mt-3'}>
         У вас есть компоненты Списка. Вам необходимо к каждому из них
         добавить порядковый номер, относительно того, как они
         располагаются на странице. Вы можете использовать как{' '}
@@ -12,15 +15,37 @@ const ChildrenExercise = () => {
         <code>React.Children.toArray</code>
       </p>
 
-      <Component/>
-      <Component/>
-      <Component/>
+      <Divider/>
+      <SmallTitle>Решение</SmallTitle>
+
+      <ComponentsList>
+        <Component/>
+        <Component/>
+        <Component/>
+      </ComponentsList>
     </CollapseWrapper>
   )
 }
+const ComponentsList = ({children}) => {
+  const arrayOfChildren = React.Children.toArray(children)
+  console.log(arrayOfChildren)
+  return React.Children.map(arrayOfChildren, (child) =>
+    React.cloneElement(child, {
+      ...child.props,
+      num: +child.key.replace('.', '') + 1
+    })
+  )
+}
+ComponentsList.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node
+  ])
+}
+const Component = ({num}) => <div>{num} Компонент списка</div>
 
-const Component = () => {
-  return <div>Компонент списка</div>
+Component.propTypes = {
+  num: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
 }
 
 export default ChildrenExercise

@@ -7,7 +7,8 @@ const SelectField = ({
                        onChange,
                        defaultOption,
                        options,
-                       error
+                       error,
+                       ...rest
                      }) => {
   const handleChange = ({target}) => {
     onChange({name: target.name, value: target.value})
@@ -25,16 +26,17 @@ const SelectField = ({
       : options
 
   return (
-    <div className="mb-4">
-      <label htmlFor="validationCustom04" className="form-label">
+    <div className={'mb-4'}>
+      <label htmlFor={'validationCustom04'} className={'form-label'}>
         {label}
       </label>
       <select
         className={getInputClasses()}
-        id="validationCustom04"
-        name="profession"
+        id={'validationCustom04'}
+        name={'profession'}
         value={value}
         onChange={handleChange}
+        {...rest}
       >
         <option disabled value="">
           {defaultOption}
@@ -46,7 +48,7 @@ const SelectField = ({
             </option>
           ))}
       </select>
-      {error && <div className="invalid-feedback">{error}</div>}
+      {error && <div className={'invalid-feedback'}>{error}</div>}
     </div>
   )
 }

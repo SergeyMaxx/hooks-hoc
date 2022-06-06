@@ -12,7 +12,7 @@ const UseCallbackExample = () => {
     <>
       <Title>useCallback</Title>
 
-      <Collapse title="Информация">
+      <Collapse title={'Информация'}>
         <BlockQuoteWrapper>
           <p>
             Аргументы: callBack, [array of dependencies]
@@ -22,13 +22,13 @@ const UseCallbackExample = () => {
           </p>
 
           <figcaption>
-            <cite title="reactjs.org">reactjs.org</cite>
+            <cite title={'reactjs.org'}>reactjs.org</cite>
           </figcaption>
         </BlockQuoteWrapper>
       </Collapse>
 
       <CardWrapper>
-        <i className="bi bi-light bulb"/>{' '}
+        <i className={'bi bi-light bulb'}/>{' '}
         <code>useCallback(fn, deps)</code> ~{' '}
         <code>useMemo(() =&gt; fn, deps)</code>
       </CardWrapper>

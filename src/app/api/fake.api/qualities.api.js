@@ -1,6 +1,5 @@
 const qualities = {
-  tedious: {
-    _id: '67rdca3eeb7f6fgeed471198',
+  tedious: {_id: '67rdca3eeb7f6fgeed471198',
     name: 'Нудила',
     color: 'primary'
   },
@@ -30,11 +29,9 @@ const qualities = {
     color: 'dark'
   }
 }
-const fetchAll = () =>
-  new Promise((resolve) => {
-    window.setTimeout(function () {
-      resolve(qualities)
-    }, 2000)
+
+const fetchAll = () => new Promise(resolve => {
+    setTimeout(() => resolve(qualities), 2000)
   })
 
 export default {

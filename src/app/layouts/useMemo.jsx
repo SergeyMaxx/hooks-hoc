@@ -10,9 +10,9 @@ const UseMemoExample = () => {
   return (
     <>
       <Title>useMemo</Title>
-      <CollapseWrapper title="Mемоизация">
+      <CollapseWrapper title={'Mемоизация'}>
         <BlockQuote>
-          <p className="mt-2">
+          <p className={'mt-2'}>
             Мемоизация (англ. memoization от англ. memory и англ.
             optimization) — в программировании сохранение
             результатов выполнения функций для предотвращения
@@ -31,8 +31,8 @@ const UseMemoExample = () => {
               результат.
             </li>
           </ul>
-          <figcaption className="blockquote-footer">
-            <cite title="Wiki">Wiki</cite>
+          <figcaption className={'blockquote-footer'}>
+            <cite title={'Wiki'}>Wiki</cite>
           </figcaption>
         </BlockQuote>
       </CollapseWrapper>
@@ -49,7 +49,7 @@ const UseMemoExample = () => {
             избежать дорогостоящих вычислений при каждом рендере.
           </p>
           <figcaption>
-            <cite title="reactjs.org">reactjs.org</cite>
+            <cite title={'reactjs.org'}>reactjs.org</cite>
           </figcaption>
         </BlockQuote>
       </CollapseWrapper>

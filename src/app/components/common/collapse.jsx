@@ -16,15 +16,15 @@ const CollapseWrapper = ({children, title, name}) => {
   }, [display])
 
   return (
-    <div className="card  my-2">
-      <div className="card-body">
-        <div className="d-flex justify-content-between">
+    <div className={'card  my-2'}>
+      <div className={'card-body'}>
+        <div className={'d-flex justify-content-between'}>
           {title}
           <i className={'bi bi-caret-' + (!display ? 'down-fill' : 'up-fill')}
              onClick={toggleDisplay}
           />
         </div>
-        <div className="collapse" ref={collapseRef} id={name + title}>
+        <div className={'collapse'} ref={collapseRef} id={name + title}>
           {children}
         </div>
       </div>

@@ -12,7 +12,7 @@ const HOCLayout = () => {
   return (
     <>
       <Title>HOC</Title>
-      <Collapse title="Информация">
+      <Collapse title={'Информация'}>
         <BlockQuoteWrapper>
           <p>
             Компонент высшего порядка (Higher-Order Component, HOC)
@@ -26,13 +26,13 @@ const HOCLayout = () => {
             компонент.
           </p>
 
-          <figcaption className="blockquote-footer">
-            <cite title="reactjs.org">reactjs.org</cite>
+          <figcaption className={'blockquote-footer'}>
+            <cite title={'reactjs.org'}>reactjs.org</cite>
           </figcaption>
         </BlockQuoteWrapper>
       </Collapse>
       <CardWrapper>
-        <i className="bi bi-light bulb"/> add{' '}
+        <i className={'bi bi-light bulb'}/> add{' '}
         <code>&quot;react/display-name&quot;: &quot;off&quot;</code> to
         EsLint rules
       </CardWrapper>

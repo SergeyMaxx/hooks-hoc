@@ -26,17 +26,17 @@ const CloneElement = () => {
           </p>
 
           <figcaption>
-            <cite title="reactjs.org">reactjs.org</cite>
+            <cite title={'reactjs.org'}>reactjs.org</cite>
           </figcaption>
         </BlockQuote>
       </CollapseWrapper>
       <CardWrapper>
-        <i className="bi bi-light bulb"/>{' '}
+        <i className={'bi bi-light bulb'}/>{' '}
         <code>
           React.cloneElement( element, [config], [...children] )
         </code>
       </CardWrapper>
-      <CollapseWrapper title="Когда использовать">
+      <CollapseWrapper title={'Когда использовать'}>
         <SmallTitle>Если</SmallTitle>
         <ul>
           <li>Невозможно изменить параметры</li>

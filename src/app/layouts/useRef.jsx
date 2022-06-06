@@ -23,8 +23,8 @@ const UseRefExample = () => {
             времени жизни компонента.
           </p>
 
-          <figcaption className="blockquote-footer">
-            <cite title="reactjs.org">reactjs.org</cite>
+          <figcaption className={'blockquote-footer'}>
+            <cite title={'reactjs.org'}>reactjs.org</cite>
           </figcaption>
         </BlockQuote>
       </CollapseWrapper>

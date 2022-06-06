@@ -28,7 +28,6 @@ function App() {
           />
           <Route path="/hoc" component={HOCLayout}/>
           <Route path="/children" component={ReactChildren}/>
-
           <Route path="/useRef" component={UseRefExample}/>
           <Route path="/" exact component={Main}/>
           <Redirect to="/"/>

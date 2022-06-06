@@ -1,10 +1,57 @@
 import React from 'react'
 import CollapseWrapper from '../common/collapse'
+import PropTypes from 'prop-types'
+import Divider from '../common/divider'
+import SmallTitle from '../common/typografy/smallTitle'
+import CardWrapper from '../common/Card'
+
+// Simple Component
+const SimpleComponent = ({onLogin, onLogOut, isAuth}) => {
+  return isAuth ? (
+    <button className={'btn btn-secondary'} onClick={onLogOut}>
+      Выйти из системы
+    </button>
+  ) : (
+    <button className={'btn btn-primary'} onClick={onLogin}>
+      Войти
+    </button>
+  )
+}
+
+SimpleComponent.propTypes = {
+  onLogin: PropTypes.func,
+  onLogOut: PropTypes.func,
+  isAuth: PropTypes.bool,
+}
+
+// HOC Component
+const withFunctions = Component => props => {
+  const handleLogin = () => {
+    localStorage.setItem('auth', 'token')
+  }
+  const handleLogout = () => {
+    localStorage.removeItem('auth')
+  }
+  const isAuth = !!localStorage.getItem('auth')
+
+  return (
+    <CardWrapper>
+      <Component
+        isAuth={isAuth}
+        onLogOut={handleLogout}
+        onLogin={handleLogin}
+        {...props}
+      />
+    </CardWrapper>
+  )
+}
+// Component with HOC
+const ComponentWithHoc = withFunctions(SimpleComponent)
 
 const HocExercise = () => {
   return (
-    <CollapseWrapper title="Упражнение">
-      <p className="mt-3">
+    <CollapseWrapper title={'Упражнение'}>
+      <p className={'mt-3'}>
         Вам необходимо реализовать компонент{' '}
         <code>SimpleComponent</code>, который:
       </p>
@@ -30,7 +77,7 @@ const HocExercise = () => {
           системы&quot; вызывается <code>onLogOut</code>
         </li>
       </ul>
-      <p className="mt-3">
+      <p className={'mt-3'}>
         Вам необходимо создать HOC с названием{' '}
         <code>withFunctions</code>, который будет принимать компонент{' '}
         <code>SimpleComponent</code> и делать следующее:
@@ -76,6 +123,9 @@ const HocExercise = () => {
         <code>SimpleComponent</code> обновится после перезагрузки
         страницы
       </p>
+      <Divider/>
+      <SmallTitle>Решение</SmallTitle>
+      <ComponentWithHoc/>
     </CollapseWrapper>
   )
 }

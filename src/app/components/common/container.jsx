@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 const ContainerWrapper = ({children}) => {
   return (
-    <div className="container mt-4" style={{paddingBottom: 60}}>
+    <div className={'container mt-4'} style={{paddingBottom: 60}}>
       {children}
     </div>
   )

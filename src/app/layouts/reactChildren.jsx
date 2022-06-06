@@ -1,7 +1,6 @@
 import React from 'react'
 import BlockQuoteWrapper from '../components/common/blockQuote'
 import CardWrapper from '../components/common/Card'
-
 import CollapseWrapper from '../components/common/collapse'
 import Divider from '../components/common/divider'
 import Subtitle from '../components/common/typografy/subtitle'
@@ -13,10 +12,10 @@ const ReactChildren = () => {
     <>
       <h1>Children</h1>
 
-      <CollapseWrapper title="Что такое Children">
+      <CollapseWrapper title={'Что такое Children'}>
         <figure>
           <blockquote>
-            <p className="mt-3">
+            <p className={'mt-3'}>
               <code> props.children </code>- Это объект,
               содержащий описание детей.
             </p>
@@ -31,10 +30,10 @@ const ReactChildren = () => {
         </figure>
       </CollapseWrapper>
 
-      <CollapseWrapper title="React.children">
+      <CollapseWrapper title={'React.children'}>
         <figure>
           <blockquote>
-            <p className="mt-3">
+            <p className={'mt-3'}>
               <code>React.Children</code> - это утилита,
               предоставляемая React, которая предоставляет функции
               для работы с непрозрачной структурой данных
@@ -44,15 +43,15 @@ const ReactChildren = () => {
         </figure>
       </CollapseWrapper>
       <CardWrapper>
-        <i className="bi bi-light bulb"/>Если <code>children</code> —
+        <i className={'bi bi-light bulb'}/>Если <code>children</code> —
         это <code>Fragment</code>, он будет рассматриваться как целый
         потомок, а элементы внутри не будут пройдены.
       </CardWrapper>
 
-      <CollapseWrapper title="React.children Functions">
-        <CollapseWrapper title="React.Children.map">
+      <CollapseWrapper title={'React.children Functions'}>
+        <CollapseWrapper title={'React.Children.map'}>
           <BlockQuoteWrapper>
-            <p className="mt-3">
+            <p className={'mt-3'}>
               <code>
                 React.Children.map(children,
                 function[(thisArg)])
@@ -69,9 +68,9 @@ const ReactChildren = () => {
             <p/>
           </BlockQuoteWrapper>
         </CollapseWrapper>
-        <CollapseWrapper title="React.Children.count">
+        <CollapseWrapper title={'React.Children.count'}>
           <BlockQuoteWrapper>
-            <p className="mt-3">
+            <p className={'mt-3'}>
               <code>React.Children.count(children)</code>
               <br/>
               Возвращает общее количество компонентов в children,
@@ -80,9 +79,9 @@ const ReactChildren = () => {
             </p>
           </BlockQuoteWrapper>
         </CollapseWrapper>
-        <CollapseWrapper title="React.Children.toArray">
+        <CollapseWrapper title={'React.Children.toArray'}>
           <BlockQuoteWrapper>
-            <p className="mt-3">
+            <p className={'mt-3'}>
               <code>React.Children.toArray(children)</code>
               <br/>
               Возвращает непрозрачную структуру данных children в

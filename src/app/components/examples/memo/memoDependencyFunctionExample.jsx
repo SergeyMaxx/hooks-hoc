@@ -1,3 +1,3 @@
-const MemoDependencyFunctionExample = props => null
+const MemoDependencyFunctionExample = () => null
 
 export default MemoDependencyFunctionExample
